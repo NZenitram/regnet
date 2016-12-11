@@ -2,21 +2,22 @@
     background-color: #DCDCDC;
 }
 
-#login-header{
-  margin-top: 150px;
-  color: #FFFFFF;
+#login {
+  margin-top: 8px;
+  color: #000000;
   letter-spacing: 1.1px;
 }
 
 #right-side {
   background-color: #000000;
-  border-radius:6px;
+  border-radius:3px;
   width: 30%;
+  color: white;
 }
 
 #left-side {
   background-color: #ffffff;
-  border-radius:6px;
+  border-radius:3px;
 }
 
 #middle {

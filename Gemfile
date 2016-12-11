@@ -36,11 +36,13 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :test do
   gem 'vcr'
   gem 'webmock'
+  gem 'database_cleaner'
 end
 
 group :development do
