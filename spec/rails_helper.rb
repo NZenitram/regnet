@@ -36,6 +36,33 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = false
 
+  def stub_omniauth
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({"provider"=>"google_oauth2",
+         "uid"=>"111267142973881035060",
+         "info"=>
+          {"name"=>"Nicholas Martinez",
+           "email"=>"nicholasmartinez@gmail.com",
+           "first_name"=>"Nicholas",
+           "last_name"=>"Martinez",
+           "image"=>"https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg",
+           "urls"=>{"Google"=>"https://plus.google.com/111267142973881035060"}},
+         "credentials"=>{"token"=>ENV['GOOGLE_TOKEN'], "expires_at"=>1481487642, "expires"=>true},
+         "extra"=>
+          {"id_token"=> ENV['GOOGLE_ID_TOKEN'],
+           "raw_info"=>
+            {"id"=>"111267142973881035060",
+             "email"=>"nicholasmartinez@gmail.com",
+             "verified_email"=>true,
+             "name"=>"Nicholas Martinez",
+             "given_name"=>"Nicholas",
+             "family_name"=>"Martinez",
+             "link"=>"https://plus.google.com/111267142973881035060",
+             "picture"=>"https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg",
+             "locale"=>"en"}}})
+
+  end
+
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
