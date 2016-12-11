@@ -1,0 +1,25 @@
+#body {
+    background-color: #DCDCDC;
+}
+
+#login-header{
+  margin-top: 150px;
+  color: #FFFFFF;
+  letter-spacing: 1.1px;
+}
+
+#right-side {
+  background-color: #000000;
+  border-radius:6px;
+  width: 30%;
+}
+
+#left-side {
+  background-color: #ffffff;
+  border-radius:6px;
+}
+
+#middle {
+  background-color: transparent;
+  width: 3%;
+}
